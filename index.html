@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>David Bernal — Ingeniería Aeroespacial | Portafolio</title>
+<meta name="description" content="Portafolio de David Bernal, estudiante de BEng/MEng en Ingeniería Aeroespacial en la University of Manchester. Perfil, experiencia laboral, educación e intereses.">
+<meta name="theme-color" content="#0e0e10">
+<meta property="og:title" content="David Bernal — Ingeniería Aeroespacial">
+<meta property="og:description" content="Portafolio de David Bernal: ingeniería aeroespacial, práctica profesional y liderazgo.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e0e10'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%2335866d' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='4.5' fill='%23f4f4f3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DAVID BERNAL — PORTAFOLIO
+   Dirección de arte tomada de "referencia.webp":
+   monocromo grayscale · titulares ultrafinos · píldoras ·
+   acento teal puntual (#35866d) · tipografía técnica mono
+   Mobile-first: estilos base = móvil, luego min-width 640/960/1200
+   ============================================================ */
+:root{
+  --bg:        #f4f4f3;
+  --paper:     #ffffff;
+  --panel:     #e9e9e7;
+  --ink:       #101012;
+  --muted:     #54545a;
+  --faint:     #8f8e90;
+  --line:      rgba(16,16,18,.14);
+  --line-soft: rgba(16,16,18,.08);
+  --accent:    #2f6e54;   /* teal oscurecido para contraste AA sobre claro */
+  --accent-2:  #35866d;   /* teal de la referencia, para fondos oscuros/acentos gráficos */
+  --accent-3:  #46b98b;
+  --dark:      #0e0e10;
+  --dark-2:    #17171a;
+  --dark-3:    #222225;
+  --light:     #f4f4f3;
+  --light-dim: rgba(244,244,243,.62);
+  --light-faint: rgba(244,244,243,.38);
+  --radius:    20px;
+  --pill:      999px;
+  --ease:      cubic-bezier(.22,.68,.26,1);
+  --font-display: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body:    "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --nav-h:     64px;
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top: calc(var(--nav-h) + 12px);
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+img,svg{ display:block; max-width:100%; }
+a{ color:inherit; }
+button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+::selection{ background:var(--accent-2); color:var(--light); }
+
+:focus-visible{ outline:2px solid var(--accent-2); outline-offset:3px; border-radius:4px; }
+
+.skip{
+  position:absolute; left:12px; top:-64px; z-index:100;
+  background:var(--dark); color:var(--light);
+  font-family:var(--font-mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase;
+  text-decoration:none; padding:.7rem 1rem; border-radius:var(--pill);
+  transition:top .3s var(--ease);
+}
+.skip:focus{ top:12px; }
+
+.container{ width:100%; max-width:1180px; margin-inline:auto; padding-inline:20px; }
+
+.eyebrow{
+  font-family:var(--font-mono); font-size:.68rem; font-weight:500;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--muted);
+  display:flex; align-items:center; gap:.6rem;
+}
+.eyebrow::before{
+  content:""; width:.55rem; height:.55rem; border-radius:50%;
+  background:var(--accent-2); flex:0 0 auto;
+}
+.eyebrow--light{ color:var(--light-dim); }
+.eyebrow--light::before{ background:var(--accent-3); }
+
+/* ============ BOTONES-PÍLDORA (como la referencia) ============ */
+.btn{
+  display:inline-flex; align-items:center; gap:.55rem;
+  font-family:var(--font-mono); font-size:.72rem; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; text-decoration:none;
+  padding:.78rem 1.35rem; border-radius:var(--pill); border:1px solid transparent;
+  transition:transform .3s var(--ease), background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+  white-space:nowrap;
+}
+.btn:hover{ transform:translateY(-2px); }
+.btn:active{ transform:translateY(0); }
+.btn .dot{ width:.42rem; height:.42rem; border-radius:50%; background:currentColor; opacity:.85; }
+
+.btn--solid{ background:var(--dark); color:var(--light); border-color:var(--dark); }
+.btn--solid:hover{ background:#000; }
+
+.btn--ghost{ background:transparent; color:var(--light); border-color:rgba(244,244,243,.45); }
+.btn--ghost:hover{ background:rgba(244,244,243,.12); border-color:rgba(244,244,243,.75); }
+
+.btn--light{ background:var(--light); color:var(--dark); border-color:var(--light); }
+.btn--light:hover{ background:#fff; border-color:#fff; }
+
+.btn--outline{ background:transparent; color:var(--ink); border-color:var(--line); }
+.btn--outline:hover{ border-color:var(--ink); }
+
+.btn--small{ padding:.55rem 1rem; font-size:.66rem; }
+
+/* ============ NAVEGACIÓN ============ */
+.nav{
+  position:fixed; inset:0 0 auto 0; z-index:50; height:var(--nav-h);
+  display:flex; align-items:center;
+  transition:background .35s var(--ease), box-shadow .35s var(--ease);
+}
+.nav.is-scrolled{
+  background:rgba(14,14,16,.72);
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 rgba(244,244,243,.08);
+}
+.nav__inner{ display:flex; align-items:center; gap:.5rem; }
+
+.logo{
+  display:inline-flex; align-items:center; gap:.55rem; text-decoration:none;
+  background:var(--dark); border:1px solid rgba(244,244,243,.14);
+  padding:.38rem .8rem .38rem .42rem; border-radius:var(--pill);
+  transition:transform .3s var(--ease);
+}
+.logo:hover{ transform:translateY(-1px); }
+.logo__mark{ width:30px; height:30px; flex:0 0 auto; }
+.logo__name{
+  color:var(--light); font-family:var(--font-mono); font-weight:500;
+  font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; line-height:1.1;
+}
+.logo__name small{ display:block; font-size:.52rem; color:var(--light-faint); letter-spacing:.2em; }
+.cv-short{ display:none; }
+
+.nav__capsule{ display:none; }
+
+.nav__actions{ display:flex; align-items:center; gap:.45rem; margin-left:auto; }
+.nav__actions .btn--solid{ background:rgba(244,244,243,.16); color:#fff; border-color:rgba(244,244,243,.45); }
+.nav__actions .btn--solid:hover{ background:var(--light); color:var(--dark); border-color:var(--light); }
+
+.burger{
+  width:44px; height:44px; border-radius:50%;
+  border:1px solid rgba(244,244,243,.25); background:var(--dark);
+  display:grid; place-items:center; gap:0;
+}
+.burger span{
+  display:block; width:16px; height:1.6px; background:var(--light);
+  transition:transform .3s var(--ease), opacity .3s var(--ease);
+}
+.burger span + span{ margin-top:3px; }
+.burger[aria-expanded="true"] span:first-child{ transform:translateY(2.3px) rotate(45deg); }
+.burger[aria-expanded="true"] span:last-child{ transform:translateY(-2.3px) rotate(-45deg); }
+
+/* Menú móvil a pantalla completa */
+.menu{
+  position:fixed; inset:0; z-index:49; background:var(--dark);
+  display:flex; flex-direction:column; justify-content:center;
+  padding:calc(var(--nav-h) + 20px) 24px 34px;
+  opacity:0; visibility:hidden; transform:translateY(-8px);
+  transition:opacity .4s var(--ease), transform .4s var(--ease), visibility .4s;
+}
+.menu.is-open{ opacity:1; visibility:visible; transform:none; }
+.menu a{
+  text-decoration:none; color:var(--light);
+  font-family:var(--font-display); font-weight:200;
+  font-size:clamp(2.1rem, 9vw, 3rem); line-height:1.14; letter-spacing:-.02em;
+  padding:.6rem 0; border-bottom:1px solid rgba(244,244,243,.1);
+  display:flex; align-items:baseline; gap:1rem;
+}
+.menu a em{ font-style:normal; font-family:var(--font-mono); font-size:.62rem; letter-spacing:.2em; color:var(--accent-3); }
+.menu__foot{ margin-top:2rem; font-family:var(--font-mono); font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--light-faint); }
+
+/* ============ HERO ============ */
+.hero{
+  position:relative; min-height:100svh;
+  background:radial-gradient(120% 90% at 78% 30%, #cfcfce 0%, #a9a8a9 42%, #8f8e90 78%, #777678 100%);
+  overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end;
+}
+/* Rejilla técnica sutil */
+.hero__grid{
+  position:absolute; inset:0; pointer-events:none; opacity:.5;
+  background-image:
+    linear-gradient(rgba(16,16,18,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,16,18,.07) 1px, transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(80% 80% at 60% 40%, #000 30%, transparent 80%);
+  -webkit-mask-image:radial-gradient(80% 80% at 60% 40%, #000 30%, transparent 80%);
+}
+/* Viñeta para que el texto blanco sea legible (lado izquierdo) */
+.hero__scrim{
+  position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(100deg, rgba(18,18,20,.9) 0%, rgba(18,18,20,.74) 46%, rgba(18,18,20,.2) 76%, rgba(18,18,20,0) 92%);
+}
+.hero__art{
+  position:absolute; right:-38%; top:15%; width:118%; height:auto;
+  opacity:.72; pointer-events:none;
+}
+.hero__content{
+  position:relative; z-index:2; padding-top:calc(var(--nav-h) + 28px); padding-bottom:88px;
+}
+.hero__title{
+  font-family:var(--font-display); font-weight:200;
+  font-size:clamp(3.4rem, 13.5vw, 7.6rem);
+  line-height:.98; letter-spacing:-.035em; color:var(--light);
+  margin:1.1rem 0 1.3rem; text-wrap:balance;
+}
+.hero__title span{ font-weight:300; color:#fff; }
+.hero__sub{
+  color:var(--light-dim); font-size:.86rem; line-height:1.5; max-width:17.5rem; font-weight:400;
+}
+.hero__cta{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.5rem; }
+
+.hero__coords{
+  position:absolute; z-index:2; right:20px; top:calc(var(--nav-h) + 18px);
+  font-family:var(--font-mono); font-size:.58rem; letter-spacing:.18em; text-transform:uppercase;
+  color:rgba(20,20,22,.72); text-align:right; line-height:1.8; display:none;
+}
+.hero__copy{
+  position:absolute; z-index:2; right:20px; bottom:14px; max-width:9.5rem;
+  font-family:var(--font-mono); font-size:.55rem; letter-spacing:.12em; text-transform:uppercase;
+  color:rgba(244,244,243,.55); text-align:right; line-height:1.7;
+}
+.hero__scroll{
+  position:absolute; z-index:2; left:20px; bottom:14px;
+  font-family:var(--font-mono); font-size:.58rem; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(244,244,243,.55); display:flex; align-items:center; gap:.5rem;
+}
+.hero__scroll::after{
+  content:""; width:1.5px; height:26px; background:linear-gradient(var(--light), transparent);
+  animation:drip 2.1s var(--ease) infinite;
+}
+@keyframes drip{ 0%{ transform:scaleY(.2); transform-origin:top; opacity:.2 } 55%{ transform:scaleY(1); opacity:1 } 100%{ transform:scaleY(.2); transform-origin:top; opacity:.2 } }
+
+/* ============ SECCIONES ============ */
+.section{ padding:72px 0; }
+.section--alt{ background:var(--panel); }
+.section--dark{ background:var(--dark); color:var(--light); }
+
+.section__head{ margin-bottom:2.1rem; }
+.section__index{
+  font-family:var(--font-mono); font-size:.62rem; letter-spacing:.25em;
+  text-transform:uppercase; color:var(--faint); margin-bottom:.35rem;
+}
+.section--dark .section__index{ color:var(--light-faint); }
+.section__title{
+  font-family:var(--font-display); font-weight:200; letter-spacing:-.03em;
+  font-size:clamp(2.1rem, 7.5vw, 3.6rem); line-height:1.02; margin-top:.5rem;
+}
+
+/* ---------- 01 · PERFIL ---------- */
+.profile{ display:grid; gap:2.2rem; }
+.profile__lead{
+  font-family:var(--font-display); font-weight:300; letter-spacing:-.015em;
+  font-size:1.28rem; line-height:1.38; color:var(--ink);
+}
+.profile__body{ margin-top:1.1rem; color:var(--muted); font-size:.92rem; max-width:34rem; }
+.facts{
+  margin-top:1.6rem; border-top:1px solid var(--line);
+  display:grid; gap:0;
+}
+.fact{
+  display:grid; grid-template-columns:1fr; gap:.1rem;
+  padding:.72rem 0; border-bottom:1px solid var(--line-soft);
+}
+.fact dt{ font-family:var(--font-mono); font-size:.58rem; letter-spacing:.2em; text-transform:uppercase; color:var(--faint); }
+.fact dd{ font-size:.88rem; font-weight:500; }
+
+.goal{
+  background:var(--dark); color:var(--light); border-radius:var(--radius);
+  padding:1.6rem; display:flex; flex-direction:column; gap:1rem;
+  position:relative; overflow:hidden;
+}
+.goal::after{
+  content:""; position:absolute; right:-70px; top:-70px; width:190px; height:190px; border-radius:50%;
+  border:1px dashed rgba(244,244,243,.18);
+}
+.goal__tag{ font-family:var(--font-mono); font-size:.58rem; letter-spacing:.24em; text-transform:uppercase; color:var(--accent-3); }
+.goal__text{
+  font-family:var(--font-display); font-weight:200; font-size:1.35rem; line-height:1.3; letter-spacing:-.01em; color:var(--light);
+}
+.goal__meta{ font-size:.75rem; color:var(--light-dim); border-top:1px solid rgba(244,244,243,.12); padding-top:1rem; }
+
+/* ---------- 02 · EXPERIENCIA (timeline) ---------- */
+.timeline{ position:relative; padding-left:1.6rem; list-style:none; }
+.timeline::before{
+  content:""; position:absolute; left:4px; top:6px; bottom:6px; width:1px;
+  background:linear-gradient(var(--ink) 0%, var(--line) 70%, transparent 100%); opacity:.35;
+}
+.job{ position:relative; padding:0 0 1.6rem; }
+.job:last-child{ padding-bottom:0; }
+.job::before{
+  content:""; position:absolute; left:-1.6rem; top:.42rem;
+  width:9px; height:9px; border-radius:50%; background:var(--bg); border:2px solid var(--ink);
+}
+.job--accent::before{ background:var(--accent-2); border-color:var(--accent-2); }
+.job__top{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.35rem .8rem; }
+.job__role{ font-family:var(--font-display); font-weight:400; font-size:1.12rem; letter-spacing:-.01em; }
+.job__company{ font-family:var(--font-mono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+.job__date{ font-family:var(--font-mono); font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); margin-left:auto; }
+.job__desc{ margin-top:.45rem; color:var(--muted); font-size:.88rem; max-width:44rem; }
+.job__tags{ display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.55rem; }
+.tag{
+  font-family:var(--font-mono); font-size:.55rem; letter-spacing:.12em; text-transform:uppercase;
+  border:1px solid var(--line); border-radius:var(--pill); padding:.28rem .6rem; color:var(--muted); background:rgba(255,255,255,.5);
+}
+
+/* ---------- 03 · EDUCACIÓN ---------- */
+.edu{ display:grid; gap:.8rem; }
+.edu-card{
+  background:var(--paper); border:1px solid var(--line-soft); border-radius:var(--radius);
+  padding:1.25rem 1.25rem 1.1rem; display:flex; flex-direction:column; gap:.5rem;
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.edu-card:hover{ transform:translateY(-4px); box-shadow:0 18px 44px rgba(16,16,18,.13); }
+.edu-card__year{ font-family:var(--font-mono); font-size:.6rem; letter-spacing:.2em; color:var(--faint); text-transform:uppercase; display:flex; justify-content:space-between; gap:.5rem; }
+.edu-card__school{ font-family:var(--font-display); font-weight:400; font-size:1.06rem; letter-spacing:-.01em; }
+.edu-card__award{ font-size:.82rem; color:var(--accent); font-weight:500; }
+.edu-card ul{ list-style:none; margin-top:.15rem; border-top:1px solid var(--line-soft); padding-top:.6rem; display:grid; gap:.28rem; }
+.edu-card li{ font-size:.8rem; color:var(--muted); padding-left:.9rem; position:relative; }
+.edu-card li::before{ content:"›"; position:absolute; left:.05rem; color:var(--accent-2); font-weight:600; }
+
+/* ---------- 04 · INTERESES ---------- */
+.interests{ display:grid; gap:.8rem; }
+.panel{
+  background:var(--paper); border:1px solid var(--line-soft); border-radius:var(--radius); padding:1.4rem;
+}
+.panel--dark{ background:var(--dark-2); border-color:rgba(244,244,243,.08); color:var(--light); }
+.panel__label{ font-family:var(--font-mono); font-size:.58rem; letter-spacing:.24em; text-transform:uppercase; color:var(--faint); margin-bottom:.8rem; display:flex; justify-content:space-between; align-items:baseline; gap:.5rem; }
+.panel--dark .panel__label{ color:var(--light-faint); }
+.chips{ display:flex; flex-wrap:wrap; gap:.5rem; }
+.chip{
+  display:inline-flex; align-items:center; gap:.5rem;
+  border:1px solid var(--line); border-radius:var(--pill); padding:.42rem .85rem;
+  font-size:.8rem; font-weight:500; background:#fff;
+}
+.chip svg{ width:14px; height:14px; stroke:var(--accent); flex:0 0 auto; }
+.hobbies{ display:grid; grid-template-columns:repeat(2,1fr); gap:.6rem; }
+.hobby{
+  border:1px solid var(--line-soft); border-radius:14px; padding:.85rem .8rem;
+  display:flex; flex-direction:column; align-items:flex-start; gap:.45rem; background:var(--bg);
+}
+.hobby svg{ width:22px; height:22px; stroke:var(--ink); }
+.hobby span{ font-size:.8rem; font-weight:600; letter-spacing:-.01em; }
+.hobby small{ font-family:var(--font-mono); font-size:.55rem; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); }
+.leadership{ display:flex; gap:.9rem; align-items:flex-start; }
+.leadership__badge{
+  flex:0 0 auto; width:44px; height:44px; border-radius:12px;
+  background:var(--accent-2); display:grid; place-items:center;
+}
+.leadership__badge svg{ width:22px; height:22px; stroke:#fff; }
+.leadership p{ font-size:.86rem; color:var(--muted); }
+.panel--dark .leadership p{ color:var(--light-dim); }
+.leadership strong{ color:var(--ink); font-weight:600; }
+.panel--dark .leadership strong{ color:var(--light); }
+
+/* ---------- 05 · CONTACTO ---------- */
+.contact{ display:grid; gap:2.2rem; }
+.contact__title{
+  font-family:var(--font-display); font-weight:200; letter-spacing:-.035em;
+  font-size:clamp(2.6rem, 10vw, 4.6rem); line-height:.98; margin:.6rem 0 1rem; color:var(--light);
+}
+.contact__title span{ color:var(--accent-3); font-weight:300; }
+.contact__note{ color:var(--light-dim); font-size:.88rem; max-width:26rem; }
+.contact__rows{ margin-top:1.6rem; display:grid; gap:.55rem; }
+.contact__row{
+  display:flex; align-items:center; gap:.8rem; text-decoration:none;
+  border:1px solid rgba(244,244,243,.14); border-radius:14px; padding:.72rem .9rem;
+  transition:border-color .3s var(--ease), background .3s var(--ease);
+}
+.contact__row:hover{ border-color:rgba(244,244,243,.38); background:rgba(244,244,243,.05); }
+.contact__row svg{ width:18px; height:18px; stroke:var(--accent-3); flex:0 0 auto; }
+.contact__row small{ display:block; font-family:var(--font-mono); font-size:.54rem; letter-spacing:.2em; text-transform:uppercase; color:var(--light-faint); }
+.contact__row b{ font-weight:500; font-size:.86rem; color:var(--light); word-break:break-all; }
+.copy-btn{
+  margin-left:auto; flex:0 0 auto; font-family:var(--font-mono); font-size:.55rem;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--light-dim);
+  border:1px solid rgba(244,244,243,.2); border-radius:var(--pill); padding:.35rem .7rem;
+  transition:all .25s var(--ease);
+}
+.copy-btn:hover{ color:var(--dark); background:var(--light); }
+
+.form{ display:grid; gap:.7rem; }
+.field{ display:grid; gap:.28rem; }
+.field label{ font-family:var(--font-mono); font-size:.56rem; letter-spacing:.22em; text-transform:uppercase; color:var(--light-faint); }
+.field input,.field textarea{
+  background:var(--dark-2); border:1px solid rgba(244,244,243,.13); border-radius:12px;
+  color:var(--light); padding:.8rem .9rem; font:inherit; font-size:.92rem; min-height:48px;
+  transition:border-color .25s var(--ease); resize:vertical;
+}
+.field textarea{ min-height:110px; }
+.field input:focus,.field textarea:focus{ outline:none; border-color:var(--accent-3); }
+.form__foot{ display:flex; flex-wrap:wrap; align-items:center; gap:.8rem; margin-top:.2rem; }
+.form__hint{ font-size:.68rem; color:var(--light-faint); max-width:16rem; }
+
+/* ============ FOOTER ============ */
+.footer{
+  background:#000; color:var(--light-faint);
+  border-top:1px solid rgba(244,244,243,.08);
+}
+.footer__inner{
+  display:flex; flex-wrap:wrap; align-items:center; gap:.8rem 1.4rem;
+  padding-top:1.1rem; padding-bottom:calc(1.1rem + env(safe-area-inset-bottom));
+}
+.footer p{ font-family:var(--font-mono); font-size:.55rem; letter-spacing:.14em; text-transform:uppercase; line-height:1.8; }
+.footer a{ color:var(--light); text-decoration:none; }
+.footer a:hover{ text-decoration:underline; }
+.footer__top{ margin-left:auto; display:inline-flex; align-items:center; gap:.4rem; text-decoration:none; font-family:var(--font-mono); font-size:.56rem; letter-spacing:.18em; text-transform:uppercase; color:var(--light-dim); }
+.footer__top:hover{ color:var(--light); }
+
+/* ============ REVEAL ON SCROLL ============ */
+.reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.is-in{ opacity:1; transform:none; }
+
+/* ============================================================
+   BREAKPOINTS — mobile first
+   ============================================================ */
+@media (max-width:479px){
+  .cv-full{ display:none; }
+  .cv-short{ display:inline; }
+  .container{ padding-inline:16px; }
+  .logo{ padding:.32rem .62rem .32rem .34rem; gap:.4rem; }
+  .logo__mark{ width:28px; height:28px; }
+  .logo__name{ font-size:.6rem; letter-spacing:.1em; }
+  .burger{ width:40px; height:40px; }
+  .nav__inner{ gap:.3rem; }
+  .nav__actions{ gap:.3rem; }
+}
+
+@media (min-width:640px){
+  .container{ padding-inline:28px; }
+  .hobbies{ grid-template-columns:repeat(4,1fr); }
+  .hero__coords{ display:block; }
+  .fact{ grid-template-columns:180px 1fr; align-items:baseline; gap:1rem; }
+  .hero__sub{ max-width:21rem; font-size:.9rem; }
+  .hero__art{ right:-14%; top:9%; width:88%; opacity:.85; }
+  .hero__scrim{ background:linear-gradient(96deg, rgba(18,18,20,.86) 0%, rgba(18,18,20,.62) 40%, rgba(18,18,20,.12) 68%, rgba(18,18,20,0) 85%); }
+}
+
+@media (min-width:960px){
+  :root{ --nav-h:72px; }
+  .burger{ display:none; }
+  .nav__capsule{
+    display:flex; align-items:center; gap:.15rem;
+    background:var(--dark); border:1px solid rgba(244,244,243,.14);
+    border-radius:var(--pill); padding:.32rem;
+  }
+  .nav__capsule a{
+    text-decoration:none; color:var(--light-dim);
+    font-family:var(--font-mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase;
+    padding:.48rem .85rem; border-radius:var(--pill); white-space:nowrap;
+    transition:color .3s var(--ease), background .3s var(--ease);
+  }
+  .nav__capsule a:hover{ color:var(--light); }
+  .nav__capsule a.is-active{ background:var(--light); color:var(--dark); }
+
+  .hero__art{ right:-6%; top:4%; width:56%; max-width:640px; }
+  .hero__content{ padding-bottom:110px; }
+  .hero__sub{ max-width:22rem; font-size:.95rem; }
+
+  .profile{ grid-template-columns:1.05fr .95fr; gap:3rem; align-items:start; }
+  .section{ padding:96px 0; }
+  .section__head{ display:grid; grid-template-columns:220px 1fr; gap:2rem; align-items:end; margin-bottom:3rem; }
+  .section__index{ margin-bottom:0; padding-bottom:.5rem; }
+  .edu{ grid-template-columns:repeat(2,1fr); }
+  .interests{ grid-template-columns:1.1fr .9fr; }
+  .interests .panel--wide{ grid-column:1 / -1; }
+  .contact{ grid-template-columns:1fr 1fr; gap:3.5rem; }
+  .job__date{ margin-left:0; }
+  .job__top{ flex-wrap:nowrap; }
+}
+
+@media (min-width:1200px){
+  .hero__art{ right:2%; width:44%; }
+  .hobbies{ grid-template-columns:repeat(4,1fr); }
+}
+
+/* ============ REDUCIDA / PRINT ============ */
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+  .reveal{ opacity:1; transform:none; }
+}
+
+@media print{
+  .nav,.menu,.hero__cta,.footer__top,.hero__scroll,.copy-btn{ display:none; }
+  .hero{ min-height:auto; background:#fff; color:#000; }
+  .hero__title,.hero__sub,.eyebrow--light{ color:#000; }
+  .section{ break-inside:avoid; padding:24px 0; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#perfil">Saltar al contenido</a>
+
+<!-- ══════════ NAVEGACIÓN ══════════ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="logo" href="#inicio" aria-label="David Bernal — Inicio">
+      <svg class="logo__mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <circle cx="32" cy="32" r="21" stroke="#35866d" stroke-width="6"/>
+        <circle cx="32" cy="32" r="5" fill="#f4f4f3"/>
+      </svg>
+      <span class="logo__name">David Bernal<small>Aerospace</small></span>
+    </a>
+
+    <nav class="nav__capsule" aria-label="Secciones del portafolio">
+      <a href="#perfil"     class="is-active" data-nav="perfil">Perfil</a>
+      <a href="#experiencia"                   data-nav="experiencia">Experiencia</a>
+      <a href="#educacion"                     data-nav="educacion">Educación</a>
+      <a href="#intereses"                     data-nav="intereses">Intereses</a>
+      <a href="#contacto"                      data-nav="contacto">Contacto</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--solid btn--small" href="fake%20CV.docx" download><span class="cv-full">Descargar CV</span><span class="cv-short">CV ↓</span></a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Menú móvil -->
+<div class="menu" id="menu" aria-hidden="true">
+  <a href="#perfil"><em>01</em> Perfil</a>
+  <a href="#experiencia"><em>02</em> Experiencia</a>
+  <a href="#educacion"><em>03</em> Educación</a>
+  <a href="#intereses"><em>04</em> Intereses</a>
+  <a href="#contacto"><em>05</em> Contacto</a>
+  <p class="menu__foot">David Bernal · Manchester, UK</p>
+</div>
+
+<main>
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="inicio" aria-label="Presentación">
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <!-- Arte técnico propio: cohete estilo blueprint (monocromo, como la referencia) -->
+  <svg class="hero__art" viewBox="0 0 560 760" fill="none" role="img" aria-label="Esquema técnico de un cohete en estilo blueprint">
+    <defs>
+      <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#f2f2f0"/><stop offset=".45" stop-color="#c9c8c9"/><stop offset="1" stop-color="#8b8a8c"/>
+      </linearGradient>
+      <radialGradient id="glow" cx=".5" cy=".38" r=".65">
+        <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/><stop offset=".55" stop-color="#ffffff" stop-opacity=".06"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <ellipse cx="280" cy="330" rx="255" ry="255" fill="url(#glow)"/>
+    <ellipse cx="280" cy="345" rx="232" ry="118" stroke="#1c1c1e" stroke-opacity=".28" stroke-dasharray="3 7"/>
+    <ellipse cx="280" cy="345" rx="150" ry="76"  stroke="#1c1c1e" stroke-opacity=".2" stroke-dasharray="2 6"/>
+
+    <!-- cuerpo del cohete -->
+    <path d="M280 92 C238 150 226 235 226 330 L226 452 C226 470 238 480 280 480 C322 480 334 470 334 452 L334 330 C334 235 322 150 280 92 Z"
+          fill="url(#body)" stroke="#141416" stroke-opacity=".55" stroke-width="1.4"/>
+    <path d="M280 92 C264 128 254 168 249 212 L311 212 C306 168 296 128 280 92 Z"
+          fill="#dcdcd9" stroke="#141416" stroke-opacity=".45" stroke-width="1.1"/>
+    <rect x="226" y="300" width="108" height="10" fill="#1c1c1e" fill-opacity=".8"/>
+    <rect x="226" y="372" width="108" height="4" fill="#1c1c1e" fill-opacity=".4"/>
+
+    <!-- aletas -->
+    <path d="M226 400 L168 500 L226 462 Z" fill="#b9b8ba" stroke="#141416" stroke-opacity=".5" stroke-width="1.3"/>
+    <path d="M334 400 L392 500 L334 462 Z" fill="#a3a2a4" stroke="#141416" stroke-opacity=".5" stroke-width="1.3"/>
+
+    <!-- tobera / motor -->
+    <path d="M244 480 L236 545 L324 545 L316 480 Z" fill="#2b2b2d" stroke="#0e0e10" stroke-width="1.2"/>
+    <path d="M250 545 L244 600 L316 600 L310 545 Z" fill="#17171a" stroke="#0e0e10"/>
+    <path d="M256 600 L280 662 L304 600" fill="none" stroke="#35866d" stroke-opacity=".9" stroke-width="2" stroke-dasharray="4 5"/>
+
+    <!-- ventana -->
+    <circle cx="280" cy="245" r="17" fill="#101012" stroke="#f4f4f3" stroke-opacity=".5" stroke-width="1.2"/>
+    <circle cx="280" cy="245" r="7" fill="#46b98b" fill-opacity=".85"/>
+
+    <!-- costillas estructurales -->
+    <path d="M262 320 L262 444 M280 322 L280 444 M298 320 L298 444" stroke="#141416" stroke-opacity=".35" stroke-dasharray="2 5"/>
+
+    <!-- líneas de cota / medidas -->
+    <g stroke="#141416" stroke-opacity=".6" stroke-width="1">
+      <path d="M130 120 L180 120 M130 112 L130 128"/>
+      <path d="M130 452 L190 452 M130 440 L130 464"/>
+      <path d="M160 120 L160 205 M160 300 L160 452" stroke-dasharray="2 4"/>
+    </g>
+    <g font-family="JetBrains Mono, monospace" font-size="12" fill="#141416" fill-opacity=".75" letter-spacing="1">
+      <text x="120" y="100">NOSE</text>
+      <text x="96" y="292">Ø 2.4 M</text>
+      <text x="150" y="500">DB-1</text>
+    </g>
+
+    <!-- marcas de registro -->
+    <g stroke="#141416" stroke-opacity=".55" stroke-width="1.4">
+      <path d="M492 96 h22 M503 85 v22"/>
+      <path d="M40 668 h22 M51 657 v22"/>
+      <path d="M500 640 h18 M509 631 v18"/>
+    </g>
+    <circle cx="512" cy="330" r="3.4" fill="#35866d"/>
+    <circle cx="70" cy="380" r="2.6" fill="#141416" fill-opacity=".6"/>
+  </svg>
+
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <p class="hero__coords" aria-hidden="true">53.4826° N · 2.2349° W<br>Manchester · UK</p>
+
+  <div class="container hero__content">
+    <p class="eyebrow eyebrow--light">Portafolio · 2026</p>
+    <h1 class="hero__title">Ingeniero<br><span>aeroespacial</span></h1>
+    <p class="hero__sub">David Bernal — estudiante de BEng/MEng en Ingeniería Aeroespacial en la University of Manchester. Me mueven el espacio, la energía y la precisión.</p>
+    <div class="hero__cta">
+      <a class="btn btn--light" href="#contacto">Contáctame</a>
+      <a class="btn btn--ghost" href="#experiencia">Mi experiencia</a>
+    </div>
+  </div>
+
+  <p class="hero__scroll" aria-hidden="true">Scroll</p>
+  <p class="hero__copy">Copyright © <span class="year">2026</span> David Bernal<br>Todos los derechos reservados.</p>
+</section>
+
+<!-- ══════════ 01 · PERFIL ══════════ -->
+<section class="section" id="perfil" aria-labelledby="perfil-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__index">01 — Perfil</p>
+      <h2 class="section__title" id="perfil-title">Quién<br>soy.</h2>
+    </div>
+
+    <div class="profile">
+      <div class="reveal">
+        <p class="profile__lead">Soy estudiante de Ingeniería Aeroespacial en la University of Manchester, con experiencia laboral en retail, hostelería y transporte comercial.</p>
+        <p class="profile__body">Soy honesto y confiable; mis trabajos anteriores han requerido buena puntualidad y una actitud positiva en entornos de alta presión. Disfruto aprender haciendo: talleres, almacén, recepción, tiendas — cualquier entorno donde se entiende cómo funciona un equipo de verdad.</p>
+
+        <dl class="facts">
+          <div class="fact"><dt>Ubicación</dt><dd>Manchester, Reino Unido</dd></div>
+          <div class="fact"><dt>Universidad</dt><dd>University of Manchester — BEng/MEng Aerospace Engineering (Foundation Year)</dd></div>
+          <div class="fact"><dt>Experiencia</dt><dd>Hostelería · Transporte comercial · Retail · Logística y recambios</dd></div>
+          <div class="fact"><dt>Idiomas</dt><dd>Español (nativo) · Inglés (fluido)</dd></div>
+          <div class="fact"><dt>Disponibilidad</dt><dd>Prácticas (internship) durante la carrera</dd></div>
+        </dl>
+      </div>
+
+      <aside class="goal reveal" aria-label="Objetivo profesional">
+        <p class="goal__tag">Objetivo</p>
+        <p class="goal__text">“Graduarme con una mayor comprensión de la industria de la ingeniería y de lo que las empresas esperan de un graduado.”</p>
+        <p class="goal__meta">— David Bernal · Candidatura a prácticas en ingeniería aeroespacial</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 02 · EXPERIENCIA ══════════ -->
+<section class="section section--alt" id="experiencia" aria-labelledby="experiencia-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__index">02 — Experiencia</p>
+      <h2 class="section__title" id="experiencia-title">Trabajo<br>real.</h2>
+    </div>
+
+    <ol class="timeline">
+      <li class="job job--accent reveal">
+        <div class="job__top">
+          <h3 class="job__role">Shop Assistant + Repartidor</h3>
+          <span class="job__company">NAME Spar Shop</span>
+          <span class="job__date">Nov 2014 — Sep 2015</span>
+        </div>
+        <p class="job__desc">Caja y manejo de dinero en tienda, atención al cliente y reposición de estantería desde almacén. Los últimos 3 meses asistí al dueño en el reparto matinal de periódicos.</p>
+        <div class="job__tags"><span class="tag">Caja</span><span class="tag">Atención al cliente</span><span class="tag">Reposición</span><span class="tag">Reparto</span></div>
+      </li>
+
+      <li class="job reveal">
+        <div class="job__top">
+          <h3 class="job__role">Kitchen Porter</h3>
+          <span class="job__company">NAME Restaurant</span>
+          <span class="job__date">Ago — Dic 2014</span>
+        </div>
+        <p class="job__desc">Carga y descarga de lavavajillas industrial, cocina limpia y ordenada, apoyo al chef jefe cuando se requería y preparación de verduras.</p>
+        <div class="job__tags"><span class="tag">Hostelería</span><span class="tag">Ritmo alto</span><span class="tag">Aseo</span></div>
+      </li>
+
+      <li class="job reveal">
+        <div class="job__top">
+          <h3 class="job__role">Parts &amp; Stores Manager</h3>
+          <span class="job__company">NAME Commercials</span>
+          <span class="job__date">Jun 2013 — Ago 2014</span>
+        </div>
+        <p class="job__desc">Gestioné todo lo relacionado con recambios de vehículos pesados: control de stock y reposición de referencias de rotación rápida, ventas a clientes y garantías, búsqueda de piezas en plazos exigentes al mejor precio, y administración de entradas y salidas para garantizar márgenes de beneficio adecuados.</p>
+        <div class="job__tags"><span class="tag">Gestión de stock</span><span class="tag">Garantías</span><span class="tag">Administración</span><span class="tag">Atención al cliente</span></div>
+      </li>
+
+      <li class="job reveal">
+        <div class="job__top">
+          <h3 class="job__role">Apprentice → Technician</h3>
+          <span class="job__company">NAME Commercials</span>
+          <span class="job__date">Jun 2010 — Jun 2013</span>
+        </div>
+        <p class="job__desc">Taller de mantenimiento y reparación de vehículos industriales. Asistí y aprendí de técnicos senior, mantuve el taller limpio y realicé mantenimiento rutinario. Obtuve el NVQ Level 2 en 2 años y fui promovido a técnico a tiempo completo: inspecciones periódicas de seguridad vial, mantenimiento y reparación de vehículos de clientes.</p>
+        <div class="job__tags"><span class="tag">HGV</span><span class="tag">Mecánica</span><span class="tag">NVQ L2</span><span class="tag">Promocionado</span></div>
+      </li>
+
+      <li class="job reveal">
+        <div class="job__top">
+          <h3 class="job__role">Asistente de Cocina / Restaurant Manager</h3>
+          <span class="job__company">Penventon Park Hotel · Redruth, Cornwall</span>
+          <span class="job__date">May 2009</span>
+        </div>
+        <p class="job__desc">Dos semanas de experiencia: asistente de ayudante de cocina y asistente del restaurant manager y del chef jefe (lavado, limpieza, preparación básica de alimentos). Roles secundarios: housekeeping, recepción y departamento de funciones.</p>
+        <div class="job__tags"><span class="tag">Hotelería</span><span class="tag">Multirol</span><span class="tag">Trabajo en equipo</span></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ 03 · EDUCACIÓN ══════════ -->
+<section class="section" id="educacion" aria-labelledby="educacion-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__index">03 — Educación</p>
+      <h2 class="section__title" id="educacion-title">Formación<br>técnica.</h2>
+    </div>
+
+    <div class="edu">
+      <article class="edu-card reveal">
+        <div class="edu-card__year"><span>2015 — Presente</span><span>Univ.</span></div>
+        <h3 class="edu-card__school">University of Manchester</h3>
+        <p class="edu-card__award">BEng/MEng — Aerospace Engineering with a Foundation Year</p>
+        <ul>
+          <li>Carrera en curso con año fundacional</li>
+          <li>Interés profundo en la industria espacial del Reino Unido</li>
+        </ul>
+      </article>
+
+      <article class="edu-card reveal">
+        <div class="edu-card__year"><span>2014 — 2015</span><span>Access to HE</span></div>
+        <h3 class="edu-card__school">College — Access to HE Engineering Science</h3>
+        <p class="edu-card__award">9 Distinctions · 6 Merits</p>
+        <ul>
+          <li>Física — 15 Distinctions</li>
+          <li>Matemáticas — 6 Distinctions · 9 Merits</li>
+        </ul>
+      </article>
+
+      <article class="edu-card reveal">
+        <div class="edu-card__year"><span>2010 — 2012</span><span>NVQ L2</span></div>
+        <h3 class="edu-card__school">College — HGV Vehicle Maintenance &amp; Repair</h3>
+        <p class="edu-card__award">Diploma NVQ Level 2</p>
+        <ul>
+          <li>Mantenimiento y reparación de vehículos pesados (HGV)</li>
+          <li>Curso compaginado con el aprendizaje en taller</li>
+        </ul>
+      </article>
+
+      <article class="edu-card reveal">
+        <div class="edu-card__year"><span>2006 — 2010</span><span>Escuela</span></div>
+        <h3 class="edu-card__school">Escuela — GCSEs</h3>
+        <p class="edu-card__award">English C · Maths C · Additional Science C</p>
+        <ul>
+          <li>Business Studies — B</li>
+          <li>Catering — C</li>
+          <li>Engineering Double Award — B, C</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 04 · INTERESES ══════════ -->
+<section class="section section--alt" id="intereses" aria-labelledby="intereses-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="section__index">04 — Intereses</p>
+      <h2 class="section__title" id="intereses-title">Fuera<br>del taller.</h2>
+    </div>
+
+    <div class="interests">
+      <div class="panel panel--wide reveal">
+        <p class="panel__label"><span>Intereses profesionales</span><span>/01</span></p>
+        <div class="chips">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.2-2 5-2 5s3.8-.5 5-2M12 3c3 0 6 3 6 8l3 5-6-1.5c-1 .8-2 1.5-3 1.5S8 15.6 8 14c0-4.5 1.5-8 4-11z"/></svg>Industria espacial del Reino Unido</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c8 0 16-6 16-16-8 0-14 4-15 10-.5 3.5.5 6-1 6z"/><path d="M4 20c4-6 10-9 14-10"/></svg>Energías renovables</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L5.5 18a2 2 0 0 0 1.9 2.6h9.2A2 2 0 0 0 18.5 18L14 9V3"/><path d="M8 15h8"/></svg>Biotecnología</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".5" fill="currentColor"/></svg>Propulsión y sistemas de vuelo</span>
+        </div>
+      </div>
+
+      <div class="panel reveal">
+        <p class="panel__label"><span>Aficiones</span><span>/02</span></p>
+        <div class="hobbies">
+          <div class="hobby">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l10-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+            <span>Guitarra</span><small>Música</small>
+          </div>
+          <div class="hobby">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M6 12V7m6 5V5m6 7V8M8 19c2 2 6 2 8 0"/><circle cx="12" cy="12" r="10"/></svg>
+            <span>Artes marciales</span><small>Disciplina</small>
+          </div>
+          <div class="hobby">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6.5-1.5L12 8l2.5 7.5L21 17l-4 2.5H7l-4-2.5z"/><path d="M12 8V3"/></svg>
+            <span>Kayak</span><small>Agua y remo</small>
+          </div>
+          <div class="hobby">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="15.5" cy="5" r="2"/><path d="M4 20c4-1 5-4 7-6l3-8 3 3-2 7 3 4"/></svg>
+            <span>Bádminton</span><small>Raqueta</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel--dark reveal">
+        <p class="panel__label"><span>Liderazgo</span><span>/03</span></p>
+        <div class="leadership">
+          <div class="leadership__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7.5" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.85M15.5 3.15a4 4 0 0 1 0 7.7"/></svg>
+          </div>
+          <p><strong>Deputy Chair — Residents Association</strong> (residencias de la University of Manchester). Asisto a la presidencia en la gestión y supervisión de la asociación: organizo eventos para los residentes, aseguro los procedimientos administrativos y de planificación, y apoyo a la rama de <strong>“Raise and Give”</strong> con recaudación de fondos benéfica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 05 · CONTACTO ══════════ -->
+<section class="section section--dark" id="contacto" aria-labelledby="contacto-title">
+  <div class="container contact">
+    <div class="reveal">
+      <p class="eyebrow eyebrow--light">05 — Contacto</p>
+      <h2 class="contact__title" id="contacto-title">Hable<span>mos.</span></h2>
+      <p class="contact__note">Busco prácticas en ingeniería aeroespacial. Si tienes un hueco para un estudiante que llega puntual y con ganas, escríbeme.</p>
+
+      <div class="contact__rows">
+        <a class="contact__row" href="mailto:David27bernal@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
+          <span><small>Email</small><b>David27bernal@gmail.com</b></span>
+          <button class="copy-btn" type="button" data-copy="David27bernal@gmail.com">Copiar</button>
+        </a>
+        <a class="contact__row" href="tel:+573114388377">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l3.27-1.27a2 2 0 0 1 2.11.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 24 22.92z" transform="translate(-1.5 0) scale(.92)"/></svg>
+          <span><small>Teléfono</small><b>+57 311 438 8377</b></span>
+          <button class="copy-btn" type="button" data-copy="+573114388377">Copiar</button>
+        </a>
+        <a class="contact__row" href="fake%20CV.docx" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 12v6M9.5 15.5 12 18l2.5-2.5"/></svg>
+          <span><small>CV completo</small><b>fake CV.docx — descargar</b></span>
+        </a>
+      </div>
+    </div>
+
+    <form class="form reveal" id="contact-form" novalidate>
+      <div class="field">
+        <label for="f-name">Nombre</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required>
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" placeholder="tucorreo@empresa.com" required>
+      </div>
+      <div class="field">
+        <label for="f-msg">Mensaje</label>
+        <textarea id="f-msg" name="message" placeholder="Hola David, tenemos una oportunidad de prácticas…" required></textarea>
+      </div>
+      <div class="form__foot">
+        <button class="btn btn--light" type="submit">Enviar mensaje</button>
+        <p class="form__hint">Se abre tu cliente de correo con el mensaje ya redactado.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>Copyright © <span class="year">2026</span> David Bernal — Ingeniería Aeroespacial.<br>Todos los derechos reservados.</p>
+    <a class="footer__top" href="#inicio">Volver arriba
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   DAVID BERNAL — PORTAFOLIO · interacciones vanilla JS
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Año dinámico en copyright ---------- */
+  var years = document.querySelectorAll('.year');
+  var now = String(new Date().getFullYear());
+  years.forEach(function (el) { el.textContent = now; });
+
+  /* ---------- Sombra / blur del header al hacer scroll ---------- */
+  var nav = document.getElementById('nav');
+  var onScroll = function () { nav.classList.toggle('is-scrolled', window.scrollY > 32); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---------- Menú móvil ---------- */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  var setMenu = function (open) {
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    menu.classList.toggle('is-open', open);
+    menu.setAttribute('aria-hidden', String(!open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  burger.addEventListener('click', function () {
+    setMenu(burger.getAttribute('aria-expanded') !== 'true');
+  });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) setMenu(false);
+  });
+
+  /* ---------- Reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    var revealIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          revealIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(function (el) { revealIO.observe(el); });
+  }
+
+  /* ---------- Nav capsule: píldora activa según sección visible ---------- */
+  var navLinks = document.querySelectorAll('[data-nav]');
+  var sections = ['perfil', 'experiencia', 'educacion', 'intereses', 'contacto']
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+
+  if (navLinks.length && sections.length && 'IntersectionObserver' in window) {
+    var setActive = function (id) {
+      navLinks.forEach(function (link) {
+        link.classList.toggle('is-active', link.getAttribute('data-nav') === id);
+      });
+    };
+    var sectionIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+    sections.forEach(function (s) { sectionIO.observe(s); });
+  }
+
+  /* ---------- Copiar email / teléfono al portapapeles ---------- */
+  var copyButtons = document.querySelectorAll('.copy-btn[data-copy]');
+  copyButtons.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var value = btn.getAttribute('data-copy');
+      var original = btn.textContent;
+      var done = function () {
+        btn.textContent = 'Copiado ✓';
+        window.setTimeout(function () { btn.textContent = original; }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(done).catch(done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = value; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (err) { /* sin soporte */ }
+        document.body.removeChild(ta);
+        done();
+      }
+    });
+  });
+
+  /* ---------- Formulario → mailto con asunto y cuerpo ---------- */
+  var form = document.getElementById('contact-form');
+  var EMAIL = 'David27bernal@gmail.com';
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var message = form.message.value.trim();
+    if (!name || !email || !message) {
+      form.reportValidity();
+      return;
+    }
+    var subject = encodeURIComponent('Contacto portafolio — ' + name);
+    var body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+    window.location.href = 'mailto:' + EMAIL + '?subject=' + subject + '&body=' + body;
+  });
+})();
+</script>
+</body>
+</html>

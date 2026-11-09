@@ -1,0 +1,7 @@
+﻿# Secretos y artefactos locales
+tokenss.txt
+tokens.txt
+.env
+.env.*
+.vercel
+node_modules/
